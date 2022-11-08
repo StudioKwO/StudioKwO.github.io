@@ -1,0 +1,185 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.32",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "AR_CavernaCacador",
+            "rotation" : [
+                0,
+                0.987939178943634,
+                0,
+                0.15484264492988586
+            ],
+            "scale" : [
+                0.01514283288270235,
+                0.0151428347453475,
+                0.0151428347453475
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Caverna.001",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "metallicRoughnessTexture" : {
+                    "index" : 2
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Dron_Fotog_Caverna_Model_7_default.003",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "COLOR_0" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "T_AR_CavernaCacador_NORMAL",
+            "uri" : "T_AR_CavernaCacador_NORMAL.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "T_AR_CavernaCacador_DIFF",
+            "uri" : "T_AR_CavernaCacador_DIFF.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "T_AR_CavernaCacador_ROUGH",
+            "uri" : "T_AR_CavernaCacador_ROUGH.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3085,
+            "max" : [
+                34.72789001464844,
+                30.228090286254883,
+                24.87510108947754
+            ],
+            "min" : [
+                -32.083824157714844,
+                -4.024178504943848,
+                -20.03226089477539
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3085,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 3085,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 3085,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 16704,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 37020,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 37020,
+            "byteOffset" : 37020,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 24680,
+            "byteOffset" : 74040,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 24680,
+            "byteOffset" : 98720,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 33408,
+            "byteOffset" : 123400,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 156808,
+            "uri" : "CavernaCacador.bin"
+        }
+    ]
+}

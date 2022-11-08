@@ -1,0 +1,192 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.32",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "SM_0202_Retopo_AR_Applied",
+            "rotation" : [
+                0,
+                -0.6009443402290344,
+                0,
+                0.7992908954620361
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "AR_PedraFurada",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "metallicRoughnessTexture" : {
+                    "index" : 2
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "SM_0202_Retopo.003",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "TEXCOORD_1" : 3,
+                        "TEXCOORD_2" : 4
+                    },
+                    "indices" : 5,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "T_AR_PedraFurada_NORMAL",
+            "uri" : "T_AR_PedraFurada_NORMAL.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "T_AR_PedraFurada_DIFF",
+            "uri" : "T_AR_PedraFurada_DIFF.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "T_AR_PedraFurada_ROUGH",
+            "uri" : "T_AR_PedraFurada_ROUGH.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 5535,
+            "max" : [
+                0.5244353413581848,
+                0.3822993040084839,
+                0.6971536874771118
+            ],
+            "min" : [
+                -0.4896799623966217,
+                -0.003539214376360178,
+                -0.712929368019104
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 5535,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 5535,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 5535,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 5535,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5123,
+            "count" : 26016,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 66420,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 66420,
+            "byteOffset" : 66420,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44280,
+            "byteOffset" : 132840,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44280,
+            "byteOffset" : 177120,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44280,
+            "byteOffset" : 221400,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 52032,
+            "byteOffset" : 265680,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 317712,
+            "uri" : "PedraFurada.bin"
+        }
+    ]
+}
