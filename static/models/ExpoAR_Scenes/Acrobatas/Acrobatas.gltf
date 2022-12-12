@@ -1,6 +1,6 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v3.3.32",
+        "generator" : "Khronos glTF Blender I/O v3.4.49",
         "version" : "2.0"
     },
     "scene" : 0,
@@ -15,7 +15,18 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "AR_Acrobatas_Applied"
+            "name" : "AR_Acrobatas_Applied",
+            "rotation" : [
+                0.7071068286895752,
+                0,
+                0,
+                0.7071068286895752
+            ],
+            "scale" : [
+                0.63828444480896,
+                0.63828444480896,
+                0.63828444480896
+            ]
         }
     ],
     "animations" : [
@@ -88,8 +99,8 @@
                 {
                     "attributes" : {
                         "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TEXCOORD_0" : 2
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
                     },
                     "indices" : 3,
                     "material" : 0
@@ -134,14 +145,14 @@
             "componentType" : 5126,
             "count" : 874,
             "max" : [
-                0.4839586019515991,
-                0.5138830542564392,
-                0.07174184173345566
+                0.8176064491271973,
+                0.11239790171384811,
+                0.8051005601882935
             ],
             "min" : [
-                -0.5218654274940491,
-                -0.46091389656066895,
-                -0.11866243183612823
+                -0.7582178711891174,
+                -0.18590834736824036,
+                -0.722113847732544
             ],
             "type" : "VEC3"
         },
@@ -149,13 +160,13 @@
             "bufferView" : 1,
             "componentType" : 5126,
             "count" : 874,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
             "count" : 874,
-            "type" : "VEC2"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 3,
@@ -203,14 +214,14 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 10488,
+            "byteLength" : 6992,
             "byteOffset" : 10488,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 6992,
-            "byteOffset" : 20976,
+            "byteLength" : 10488,
+            "byteOffset" : 17480,
             "target" : 34962
         },
         {
