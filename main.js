@@ -2,10 +2,16 @@ const THREE = window.MINDAR.IMAGE.THREE;
 import {mockWithVideo, mockWithImage} from './libs/camera-mock.js';
 import {loadGLTF} from "./libs/loader.js";
 import { Vector3, } from './libs/three.js-r132/build/three.module.js';
+import { FontLoader } from './libs/three.js-r132/build/three.module.js';
 import { RGBELoader } from './libs/three.js-r132/examples/jsm/loaders/RGBELoader.js';
+import { CSS3DObject } from './libs/three.js-r132/examples/jsm/renderers/CSS3DRenderer.js';
 console.log(THREE);
 
 let anchors = [];
+let loaded = 0;
+let font;
+let materials;
+let textMesh1;
 const models = [
     ["./static/models/ExpoAR_Scenes/Guerra/Guerra.gltf", "Guerra"],
     ["./static/models/ExpoAR_Scenes/Adoracao/Adoracao.gltf", "Adoracao"],
@@ -32,7 +38,6 @@ const transforms = [
     [new Vector3(1.5,1.5,1.5),new THREE.Euler(Math.PI/2,0,0),new Vector3(0,0.2,0)]
 ]
 
-
 async function LoadModelAttachToAnchorIndex(mindarThree, transform, model, index){
     // This is the anchor of the Marker Index 0
     const anchor = mindarThree.addAnchor(index);
@@ -52,6 +57,8 @@ async function LoadModelAttachToAnchorIndex(mindarThree, transform, model, index
         console.log("Lost anchor: "+ index +", name: " + model[1]);
     };
 }
+let text = document.getElementById("info");
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const start = async () => {
@@ -61,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
             container: document.body,
             imageTargetSrc: './static/target/targets.mind',
-            uiLoading: "yes",
+            uiLoading: "no",
             uiScanning: "yes",
             // uiError: "yes",
             // filterMinCF:0, 
@@ -71,20 +78,37 @@ document.addEventListener("DOMContentLoaded", () => {
             //maxTrack:2
         });
 
+        const loader = new FontLoader();
+        loader.load( './static/font/helvetiker_regular.typeface.json', function ( _font ) {
+            font = _font;
+        } );
+        materials = [
+            new THREE.MeshPhongMaterial( { color: 0xffffff, flatShading: true } ), // front
+            new THREE.MeshPhongMaterial( { color: 0xffffff } ) // side
+        ];
+
         console.log(mindarThree);
 
-        const {renderer,scene,camera} = mindarThree;
+        const {renderer, scene, camera} = mindarThree;
+
+        
 
         AddLight(scene);
 
         for (let i=0;i<10;i++) {
             await LoadModelAttachToAnchorIndex(mindarThree, transforms[i], models[i],i);
+            text.textContent = "Baixando Objetos 3D: " + (i+1)*10 + "%";
+            renderer.render(scene, camera);
         }
-
+        text.textContent = "Iniciando Realidade Aumentada";
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        text.remove();
         await mindarThree.start();
 
+        
         renderer.setAnimationLoop(() => {
             renderer.render(scene, camera);
+
         });
     }
     start();
@@ -104,4 +128,27 @@ function AddLight(scene){
         //scene.background = texture;
         scene.environment = texture;
     }); 
+}
+
+function AddNewText(scene){
+    textMesh1 = null;
+	const geometry = new THREE.TextGeometry( 'Loaded: ' + loaded , {
+		font: font,
+		size: 20,
+		height: 5,
+		curveSegments: 12,
+		bevelEnabled: true,
+		bevelThickness: 10,
+		bevelSize: 8,
+		bevelOffset: 0,
+		bevelSegments: 5
+	} );
+
+    textMesh1 = new THREE.Mesh( geometry, materials );
+    textMesh1.position.x = 0;
+    textMesh1.position.y = 0;
+    textMesh1.position.z = -10;
+
+    scene.add( textMesh1 );
+
 }
