@@ -100,8 +100,17 @@ document.addEventListener("DOMContentLoaded", () => {
             text.textContent = "Baixando Objetos 3D: " + (i+1)*10 + "%";
             renderer.render(scene, camera);
         }
+        await new Promise(resolve => setTimeout(resolve, 500));
+        text.textContent = "Tinta & Fogo AR";
+        await new Promise(resolve => setTimeout(resolve, 2500));
         text.textContent = "Iniciando Realidade Aumentada";
         await new Promise(resolve => setTimeout(resolve, 1000));
+        text.textContent = "Iniciando Realidade Aumentada.";
+        await new Promise(resolve => setTimeout(resolve, 500));
+        text.textContent = "Iniciando Realidade Aumentada..";
+        await new Promise(resolve => setTimeout(resolve, 500));
+        text.textContent = "Iniciando Realidade Aumentada...";
+        await new Promise(resolve => setTimeout(resolve, 500));
         text.remove();
         await mindarThree.start();
 
