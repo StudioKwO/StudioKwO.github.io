@@ -13,7 +13,7 @@ let font;
 let materials;
 let textMesh1;
 const models = [
-    ["./static/Aleijadinho/models/Profetas/Isaias/Profeta 1 - Isaias.gltf", "Isaias"]
+    ["./static/Aleijadinho/models/Profetas/Isaias/Isaias.gltf", "Isaias"]
 ]; 
 const transforms = [
     // scale, rotation, position
